@@ -1,5 +1,3 @@
-#2023.05.09 최종수정
-
 #Environment
 	#mas
 	brew "mas"
