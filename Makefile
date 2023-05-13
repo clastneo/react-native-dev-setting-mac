@@ -19,7 +19,7 @@ install: set-xcode-cli set-brew
 	
 	@make set-xcode
 	@make set-rbenv
-	@make set-nvm
+#	@make set-nvm
 	@make set-android
 	@make set-rosetta
 	@make set-applications
