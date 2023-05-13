@@ -33,3 +33,11 @@
     
     b. yarn android:dev || yarn ios:dev 시에 launchPackager.command이(가) 터미널에서 문서를 열도록 허용되지 않았기 때문에 '(null)'을(를) 열 수 없습니다. 에러 발생시 링크 참조 [[RN에러노트]launchpackager.command이 가 터미널에서 문서를 열도록 허용되지 않았기 때문에 null 을 를 열 수 없습니다.](https://velog.io/@rudans987/RN%EC%97%90%EB%9F%AC%EB%85%B8%ED%8A%B8launchpackager.command%EC%9D%B4-%EA%B0%80-%ED%84%B0%EB%AF%B8%EB%84%90%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C%EB%A5%BC-%EC%97%B4%EB%8F%84%EB%A1%9D-%ED%97%88%EC%9A%A9%EB%90%98%EC%A7%80-%EC%95%8A%EC%95%98%EA%B8%B0-%EB%95%8C%EB%AC%B8%EC%97%90-null-%EC%9D%84-%EB%A5%BC-%EC%97%B4-%EC%88%98-%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4)
     → 해당 오류 회피는 metro를 따로 실행한 후에 ios나 android를 실행하는 형태로 회피할 수 있는 듯
+
+# inspired by and thanks to...
+
+- https://github.com/dev-yakuza/development-environment-for-mac-os
+- https://github.com/smileostrich/mac-auto-setup
+- https://github.com/seongjoojin/mac-dev-setup
+- https://gist.github.com/CliffordAnderson/817777b5dc0e67769e4b
+- https://velog.io/@haejeonghy/Homebrew-Tap-%EC%82%AC%EC%9A%A9
