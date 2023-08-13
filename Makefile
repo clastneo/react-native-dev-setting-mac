@@ -20,6 +20,7 @@ install: set-xcode-cli set-brew
 	@make set-xcode
 	@make set-rbenv
 #	@make set-nvm
+	@make set-java
 	@make set-android
 	@make set-rosetta
 	@make set-applications
@@ -63,6 +64,12 @@ set-rosetta:
 set-android:
 	@make set-android-path
 
+set-java:
+	@make set-java-path
+
+set-java-path:
+	$(call execute_commands, java path setting, $(commands-java-path))
+
 set-android-path:
 	$(call execute_commands, android path setting, $(commands-android-path))
 
@@ -70,6 +77,13 @@ cleanup:
 	brew bundle cleanup --force --file=Brewfile_fez_taap
 
 # Define commands to install and setting environments
+
+
+commands-java-path := \
+	echo '\nexport JAVA_HOME=`/usr/libexec/java_home -v 17`' \
+		>> ~/.zshrc && \
+	echo 'export PATH=$$PATH:$$JAVA_HOME/bin\n' \
+		>> ~/.zshrc && \
 
 commands-android-path := \
 	echo '\nexport ANDROID_HOME=$$HOME/Library/Android/sdk' \
