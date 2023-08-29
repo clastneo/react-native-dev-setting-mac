@@ -13,7 +13,7 @@ NODE_VERSION := 18.16.0
 XCODE_VERSION := 14.3.1
 
 #Applications
-APPLICATIONS := "Sourcetree" "Android Studio" "Android File Transfer" "Google Chrome" "RunCat" "Xcode-14.3.0" "Visual Studio Code" "Postman" "IntelliJ IDEA CE" "Slack";
+APPLICATIONS := "Sourcetree" "Android Studio" "Android File Transfer" "Google Chrome" "RunCat" "$(XCODE_VERSION)" "Visual Studio Code" "Postman" "IntelliJ IDEA CE" "Slack";
 
 install: set-xcode-cli set-brew
 	sudo -v
