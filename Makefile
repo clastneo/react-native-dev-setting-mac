@@ -9,6 +9,9 @@ RUBY_VERSION := 2.7.5
 #Node version
 NODE_VERSION := 18.16.0
 
+#Xcode version
+XCODE_VERSION := 14.3.1
+
 #Applications
 APPLICATIONS := "Sourcetree" "Android Studio" "Android File Transfer" "Google Chrome" "RunCat" "Xcode-14.3.0" "Visual Studio Code" "Postman" "IntelliJ IDEA CE" "Slack";
 
@@ -19,7 +22,7 @@ install: set-xcode-cli set-brew
 	
 	@make set-xcode
 	@make set-rbenv
-#	@make set-nvm
+	@make set-nvm
 	@make set-java
 	@make set-android
 	@make set-rosetta
@@ -50,7 +53,7 @@ set-applications:
 	done
 
 set-xcode:
-	@xcodes install 14.3 --experimental-unxip
+	@xcodes install $(XCODE_VERSION) --experimental-unxip
 
 set-rbenv:
 	$(call execute_commands, rbenv setting, $(commands-rbenv))
@@ -109,8 +112,8 @@ commands-nvm := \
 	echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"' >> ~/.zshrc && \
 	echo '\# This loads nvm bash_completion' >> ~/.zshrc && \
 	echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"'	>> ~/.zshrc && \
-	nvm install $(NODE_VERSION) && \
-	nvm alias system $(NODE_VERSION)
+	nvm install --lts && \
+	nvm use --lts
 				
 commands-rosetta := \
 	/usr/sbin/softwareupdate --install-rosetta --agree-to-license;
