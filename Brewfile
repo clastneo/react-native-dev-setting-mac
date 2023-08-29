@@ -42,6 +42,9 @@
 	#android File Transfer
 	cask "android-file-transfer"
 
+	#CocoaPods
+	brew "cocoapods"
+
 
 #Tools
 	#Terminal
