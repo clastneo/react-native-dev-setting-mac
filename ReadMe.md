@@ -15,6 +15,7 @@
 <!-- - nvm 관련 설정이 비정상 동작하네요. 우선 해당 옵션 비활성화하겠습니다. brew install node를 통해 node를 설치하여 사용하시거나 nvm 설치 완료 후 nvm 설정 스크립트를 수동으로 진행하시면 됩니다. -->
 
 - ruby 버전은 리액트 네이티브 0.70.5 버전 기준으로 반영되었으며,0.71.x 부터는 2.7.6을 사용합니다. <https://github.com/facebook/react-native/blob/v0.71.3/.ruby-version>
+- 리액트 네이티브 0.72.x부터는 ruby 환경설정을 따로 진행하지 않아도 됩니다.
 
 ## 사용법
 
